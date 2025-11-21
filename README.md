@@ -1,14 +1,14 @@
 # Trabajo de Consulta: Programación Funcional y Reactiva
 
 **Tema:** Funciones de Orden Superior y Método de Simpson 1/3  
-[cite_start]**Asignatura:** Programación Funcional y Reactiva [cite: 1, 2]
+[cite_start]**Asignatura:** Programación Funcional y Reactiva
 
 ---
 
 ## 1. Objetivos
-* [cite_start]Aplicar los conocimientos sobre funciones de orden superior[cite: 6].
-* [cite_start]Enviar una función como parámetro en Scala[cite: 6].
-* [cite_start]Implementar el algoritmo de Simpson 1/3 para la integración numérica[cite: 8].
+* [cite_start]Aplicar los conocimientos sobre funciones de orden superior.
+* [cite_start]Enviar una función como parámetro en Scala.
+* [cite_start]Implementar el algoritmo de Simpson 1/3 para la integración numérica.
 
 ---
 
@@ -16,16 +16,16 @@
 
 El método de Simpson 1/3 es un procedimiento de integración numérica utilizado para encontrar una aproximación del área bajo una curva definida por una función $f(x)$ en un intervalo $[a, b]$.
 
-[cite_start]La fórmula general establecida es[cite: 8, 10]:
+[cite_start]La fórmula general establecida es:
 
 $$\int_{a}^{b}f(x)dx \cong (b-a) \frac{f(a)+4f(\bar{x})+f(b)}{6}$$
 
-[cite_start]Donde $\bar{x}$ corresponde al punto medio del intervalo[cite: 11]:
+[cite_start]Donde $\bar{x}$ corresponde al punto medio del intervalo:
 
 $$\bar{x} = \frac{a+b}{2}$$
 
 ### Cálculo del Error
-[cite_start]Para verificar la precisión del algoritmo, se calcula el error absoluto comparando el valor aproximado obtenido mediante el código y el valor matemático esperado[cite: 27, 28]:
+[cite_start]Para verificar la precisión del algoritmo, se calcula el error absoluto comparando el valor aproximado obtenido mediante el código y el valor matemático esperado:
 
 $$Error = |valorEsperado - valorObtenido|$$
 
@@ -33,7 +33,7 @@ $$Error = |valorEsperado - valorObtenido|$$
 
 ## 3. Desarrollo de la Solución
 
-A continuación se presenta la implementación en **Scala**. [cite_start]Se ha creado una función llamada `integracion` que recibe como parámetro la función matemática a evaluar, cumpliendo con el concepto de **High Order Functions** (Funciones de Orden Superior)[cite: 4, 15].
+A continuación se presenta la implementación en **Scala**. Se ha creado una función llamada `integracion` que recibe como parámetro la función matemática a evaluar, cumpliendo con el concepto de **High Order Functions** (Funciones de Orden Superior).
 
     scala
     def integracion(f: Double => Double, a: Double, b: Double): Double =
@@ -55,7 +55,7 @@ $$Error = |ValorEsperado - ValorObtenido|$$
 
 ### Tabla de Resultados
 
-| # | Función Integral | Intervalo $[a, b]$ | [cite_start]Valor Esperado [cite: 20-26] | Valor Obtenido (Código) | Margen de Error |
+| # | Función Integral | Intervalo $[a, b]$ | Valor Esperado  | Valor Obtenido (Código) | Margen de Error |
 |:-:|:---|:---:|:---:|:---:|:---:|
 | **1** | $\int (-x^{2}+8x-12)dx$ | $[3, 5]$ | 7.33 | 7.33333 | 0.00333 |
 | **2** | $\int 3x^{2}dx$ | $[0, 2]$ | 8.0 | 8.00000 | 0.00000 |
@@ -74,6 +74,6 @@ $$Error = |ValorEsperado - ValorObtenido|$$
 
 ## 5. Conclusiones
 
-1.  [cite_start]**Aplicación de Funciones de Orden Superior:** Se cumplió con el objetivo principal [cite: 5] al implementar la función `integracion`, la cual recibe otra función como parámetro (`f: Double => Double`). Esto permitió desacoplar la lógica del algoritmo numérico de las ecuaciones matemáticas específicas, facilitando la reutilización del código.
-2.  [cite_start]**Eficacia del Método:** La implementación en Scala demostró ser una herramienta confiable para la aproximación de integrales, obteniendo resultados muy cercanos a los valores analíticos esperados [cite: 28, 29] con un esfuerzo computacional mínimo.
+1. **Aplicación de Funciones de Orden Superior:** Se cumplió con el objetivo principal [cite: 5] al implementar la función `integracion`, la cual recibe otra función como parámetro (`f: Double => Double`). Esto permitió desacoplar la lógica del algoritmo numérico de las ecuaciones matemáticas específicas, facilitando la reutilización del código.
+2. **Eficacia del Método:** La implementación en Scala demostró ser una herramienta confiable para la aproximación de integrales, obteniendo resultados muy cercanos a los valores analíticos esperados [cite: 28, 29] con un esfuerzo computacional mínimo.
 3.  **Paradigma Funcional:** El uso de la inmutabilidad y las expresiones lambda simplificó la sintaxis del algoritmo matemático, resultando en un código más limpio y legible en comparación con enfoques imperativos tradicionales.
