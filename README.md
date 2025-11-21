@@ -36,59 +36,12 @@ $$Error = |valorEsperado - valorObtenido|$$
 A continuación se presenta la implementación en **Scala**. [cite_start]Se ha creado una función llamada `integracion` que recibe como parámetro la función matemática a evaluar, cumpliendo con el concepto de **High Order Functions** (Funciones de Orden Superior)[cite: 4, 15].
 
     scala
-    object SimpsonIntegration {
-
-        /**
-        * Función de integración numérica usando Simpson 1/3.
-        * @param f Función matemática a evaluar (Double => Double)
-        * @param a Límite inferior del intervalo
-        * @param b Límite superior del intervalo
-        * @return Valor aproximado de la integral
-        */
-        def integracion(f: Double => Double, a: Double, b: Double): Double = {
-            val x = (a + b) / 2.0 // Cálculo de x barra (punto medio)
-            (b - a) * (f(a) + 4 * f(x) + f(b)) / 6.0
-        }
-
-        /**
-        * Calcula el error absoluto de la aproximación.
-        */
-        def error(valorEsperado: Double, valorObtenido: Double): Double = {
-            Math.abs(valorEsperado - valorObtenido)
-        }
-
-        // Bloque principal para ejecución de pruebas
-        def main(args: Array[String]): Unit = {
-            
-            // 1. Ejercicio 1
-            val res1 = integracion(x => -Math.pow(x, 2) + 8 * x - 12, 3, 5)
-            println(s"Ejercicio 1: Aproximación = $res1 | Error = ${error(7.33, res1)}")
-
-            // 2. Ejercicio 2
-            val res2 = integracion(x => 3 * Math.pow(x, 2), 0, 2)
-            println(s"Ejercicio 2: Aproximación = $res2 | Error = ${error(8, res2)}")
-
-            // 3. Ejercicio 3
-            val res3 = integracion(x => x + 2 * Math.pow(x, 2) - Math.pow(x, 3) + 5 * Math.pow(x, 4), -1, 1)
-            println(s"Ejercicio 3: Aproximación = $res3 | Error = ${error(3.333, res3)}")
-
-            // 4. Ejercicio 4
-            val res4 = integracion(x => (2 * x + 1) / (Math.pow(x, 2) + x), 1, 2)
-            println(s"Ejercicio 4: Aproximación = $res4 | Error = ${error(1.09861, res4)}")
-
-            // 5. Ejercicio 5
-            val res5 = integracion(x => Math.exp(x), 0, 1)
-            println(s"Ejercicio 5: Aproximación = $res5 | Error = ${error(1.71828, res5)}")
-
-            // 6. Ejercicio 6
-            val res6 = integracion(x => 1 / Math.sqrt(x - 1), 2, 3)
-            println(s"Ejercicio 6: Aproximación = $res6 | Error = ${error(0.828427, res6)}")
-
-            // 7. Ejercicio 7
-            val res7 = integracion(x => 1 / (1 + Math.pow(x, 2)), 0, 1)
-            println(s"Ejercicio 7: Aproximación = $res7 | Error = ${error(0.785398, res7)}")
-        }
-    }
+    def integracion(f: Double => Double, a: Double, b: Double): Double =
+      val x = (a + b) / 2.0 // x barra
+      (b - a) * (f(a) + 4 * f(x) + f(b)) / 6.0
+    
+    def error(valorEsperado: Double, valorObtenido: Double): Double =
+      Math.abs(valorEsperado - valorObtenido)
 
 
 
