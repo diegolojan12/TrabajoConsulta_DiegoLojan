@@ -74,6 +74,6 @@ $$Error = |ValorEsperado - ValorObtenido|$$
 
 ## 5. Conclusiones
 
-1. **Aplicación de Funciones de Orden Superior:** Se cumplió con el objetivo principal [cite: 5] al implementar la función `integracion`, la cual recibe otra función como parámetro (`f: Double => Double`). Esto permitió desacoplar la lógica del algoritmo numérico de las ecuaciones matemáticas específicas, facilitando la reutilización del código.
-2. **Eficacia del Método:** La implementación en Scala demostró ser una herramienta confiable para la aproximación de integrales, obteniendo resultados muy cercanos a los valores analíticos esperados [cite: 28, 29] con un esfuerzo computacional mínimo.
+1. **Aplicación de Funciones de Orden Superior:** Se cumplió con el objetivo principal al implementar la función `integracion`, la cual recibe otra función como parámetro (`f: Double => Double`). Esto permitió desacoplar la lógica del algoritmo numérico de las ecuaciones matemáticas específicas, facilitando la reutilización del código.
+2. **Eficacia del Método:** La implementación en Scala demostró ser una herramienta confiable para la aproximación de integrales, obteniendo resultados muy cercanos a los valores analíticos esperados con un esfuerzo computacional mínimo.
 3.  **Paradigma Funcional:** El uso de la inmutabilidad y las expresiones lambda simplificó la sintaxis del algoritmo matemático, resultando en un código más limpio y legible en comparación con enfoques imperativos tradicionales.
