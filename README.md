@@ -35,7 +35,7 @@ $$Error = |valorEsperado - valorObtenido|$$
 
 A continuación se presenta la implementación en **Scala**. [cite_start]Se ha creado una función llamada `integracion` que recibe como parámetro la función matemática a evaluar, cumpliendo con el concepto de **High Order Functions** (Funciones de Orden Superior)[cite: 4, 15].
 
-    ```scala
+    scala
     object SimpsonIntegration {
 
         /**
