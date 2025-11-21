@@ -1,14 +1,14 @@
 # Trabajo de Consulta: Programación Funcional y Reactiva
 
 **Tema:** Funciones de Orden Superior y Método de Simpson 1/3  
-[cite_start]**Asignatura:** Programación Funcional y Reactiva
+**Asignatura:** Programación Funcional y Reactiva
 
 ---
 
 ## 1. Objetivos
-* [cite_start]Aplicar los conocimientos sobre funciones de orden superior.
-* [cite_start]Enviar una función como parámetro en Scala.
-* [cite_start]Implementar el algoritmo de Simpson 1/3 para la integración numérica.
+* Aplicar los conocimientos sobre funciones de orden superior.
+* Enviar una función como parámetro en Scala.
+* Implementar el algoritmo de Simpson 1/3 para la integración numérica.
 
 ---
 
@@ -16,16 +16,16 @@
 
 El método de Simpson 1/3 es un procedimiento de integración numérica utilizado para encontrar una aproximación del área bajo una curva definida por una función $f(x)$ en un intervalo $[a, b]$.
 
-[cite_start]La fórmula general establecida es:
+La fórmula general establecida es:
 
 $$\int_{a}^{b}f(x)dx \cong (b-a) \frac{f(a)+4f(\bar{x})+f(b)}{6}$$
 
-[cite_start]Donde $\bar{x}$ corresponde al punto medio del intervalo:
+Donde $\bar{x}$ corresponde al punto medio del intervalo:
 
 $$\bar{x} = \frac{a+b}{2}$$
 
 ### Cálculo del Error
-[cite_start]Para verificar la precisión del algoritmo, se calcula el error absoluto comparando el valor aproximado obtenido mediante el código y el valor matemático esperado:
+Para verificar la precisión del algoritmo, se calcula el error absoluto comparando el valor aproximado obtenido mediante el código y el valor matemático esperado:
 
 $$Error = |valorEsperado - valorObtenido|$$
 
